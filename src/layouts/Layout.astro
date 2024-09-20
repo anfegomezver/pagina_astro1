@@ -4,138 +4,190 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<header>
-			<div class="top-header">
-				<span>
-					<img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.73/mercadolibre/logo_large_25years_v2.png" alt="">
-				</span>
-				<div class="input">
-					<input type="text" placeholder="Escribe algo">
-					<button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-					  </svg>
-					  </button>
-				</div>
-				<span>publicidad</span>
-			</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <div class="top-header">
+        <div class="imagen">
+          <img
+            src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.73/mercadolibre/logo_large_25years_v2.png"
+            alt=""
+          />
+        </div>
+        <div class="input">
+          <input type="text" placeholder="Buscar productos, marcas y más..." />
+          <div class="separacion">
+            <span></span>
+          </div>
+          <button
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="publicidad">
+          <a href="https://www.disneyplus.com/es-us" target="_blank"
+            ><img
+              src="https://http2.mlstatic.com/D_NQ_873803-MLA78739315606_092024-OO.webp"
+              alt=""
+            /></a
+          >
+        </div>
+      </div>
 
-			<div class="bot-header">
-				
-			</div>
-		</header>
-		<div class="banner">
+      <div class="bot-header"></div>
+    </header>
+    <div class="banner"></div>
 
-		</div>
-
-		<div class="cards container">
-			<div class="card">
-				a
-			</div>
-			<div class="card">
-				x
-			</div>
-			<div class="card">
-				c
-			</div>
-			<div class="card">
-				c
-			</div>
-			<div class="card">
-				c
-			</div>
-			<div class="card">
-				c
-			</div>
-
-		</div>
-		<!-- <slot /> -->
-	</body>
+    <div class="cards container">
+      <div class="card">a</div>
+      <div class="card">x</div>
+      <div class="card">c</div>
+      <div class="card">c</div>
+      <div class="card">c</div>
+      <div class="card">c</div>
+    </div>
+    <!-- <slot /> -->
+  </body>
 </html>
 <style is:global>
-	html, body{
-		margin: 0;
-		padding: 0;
-		background-color: #F2F2F2
-	}
-	header {
-		height: 80px;
-		background: #e2d523;
-		padding-top: 12px;
-	}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
 
-	header img{
-		width: 120px;
-	}
+  header {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    background: #ffe600;
+    padding-top: 12px;
+  }
 
-	header input{
-		box-sizing: border-box;
-		display: inline;
-		width: 80%;
-		padding: 10px 8px;
-		border-top-left-radius: 3px;
-		border-bottom-left-radius: 3px;
-		border: none;
-		outline: none;
-		background: #fff;
-		height: 36px;
-	}
+  .imagen {
+    width: 120px;
+  }
+  .imagen img {
+    width: 130px;
+	
+  }
 
-	header button{
-		display: inline;
-		border: none;
-		width: 32px;
-		background: #fff;
-		height: 36px;
-		border-top-right-radius: 3px;
-		border-bottom-right-radius: 3px;
-	}
+  header input {
+    box-sizing: border-box;
+    display: inline;
+    width: 80%;
+    padding: 10px 8px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 40px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 3px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 380;
+    color: #636363;
+	padding-left: 15px;
+  }
 
-	button svg{
-		stroke: red;
-	}
-	.input{
-		display: flex;
-		justify-content: center;
-	}
-	.banner{
-		height: 280px;
-		background: linear-gradient(to bottom, #e2d523 60%, #F2F2F2 100%);
-	}
+  header button {
+    display: inline;
+    border: none;
+    width: 32px;
+    background: #fff;
+    height: 40px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+    box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.1);
+  }
 
-	.container{
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-	.cards{
-		margin-top: -80px;
-		height: 190px;
-		/* background-color: purple; */
-		display: flex;
-		gap: 10px;
+  .separacion {
+    height: 40px;
+    width: 1px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
 
+  .separacion span {
+    background-color: #b1b1b1;
+    width: 1px;
+    height: 20px;
+  }
 
-	}
-	.card{
-		/* min-width: 180px; */
-		flex-grow: 1;
-		background-color: #fff;
-		border-radius: 6px;
-	}
+  button svg {
+    stroke: #676767;
+  }
+  .input {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+  }
 
-	.top-header{
-		column-count: 3;
-	}
+  .publicidad img {
+    width: 350px;
+    height: 40px;
+  }
 
-	.top-header span{
-		display: block;
-	}
+  .banner {
+    height: 280px;
+    background: linear-gradient(to bottom, #ffe600 60%, #f2f2f2 100%);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .cards {
+    margin-top: -80px;
+    height: 190px;
+    /* background-color: purple; */
+    display: flex;
+    gap: 10px;
+  }
+  .card {
+    /* min-width: 180px; */
+    flex-grow: 1;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+
+  .top-header {
+    width: 1200px;
+    column-count: 3;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-header span {
+    display: block;
+  }
 </style>
