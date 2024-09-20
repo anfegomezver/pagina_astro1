@@ -8,7 +8,11 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -61,15 +65,48 @@ const { title } = Astro.props;
 
       <div class="bot-header"></div>
     </header>
-    <div class="banner"></div>
+    <div class="h-[320px] to-60% bg-gradient-to-b from-[#ffe600] to-[#f2f2f2]" ></div>
 
-    <div class="cards container">
-      <div class="card">a</div>
-      <div class="card">x</div>
-      <div class="card">c</div>
-      <div class="card">c</div>
-      <div class="card">c</div>
-      <div class="card">c</div>
+    <div class="mt-[-80px] h-48 flex gap-3 max-w-[1200px] mx-auto">
+      <div class="flex-grow bg-white rounded-lg">a</div>
+      <div class="flex-grow bg-white rounded-lg">x</div>
+      <div class="flex-grow bg-white rounded-lg">c</div>
+      <div class="flex-grow bg-white rounded-lg">c</div>
+      <div class="flex-grow bg-white rounded-lg">c</div>
+      <div class="flex-grow bg-white rounded-lg">c</div>
+    </div>
+    <div
+      class="group bg-blue-500 text-white py-2 px-4 inline-flex rounded hover:cursor-pointer hover:bg-blue-700 transition-colors duration-300 items-center"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-4 mt-[4px] mr-1 group-hover:animate-spin"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+        ></path>
+      </svg>
+
+      Presioname!
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-4 mt-[4px] ml-1"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+      </svg>
     </div>
     <!-- <slot /> -->
   </body>
@@ -156,10 +193,10 @@ const { title } = Astro.props;
     height: 40px;
   }
 
-  .banner {
+  /*.banner {
     height: 280px;
     background: linear-gradient(to bottom, #ffe600 60%, #f2f2f2 100%);
-  }
+  }*/
 
   .container {
     max-width: 1200px;
@@ -168,7 +205,6 @@ const { title } = Astro.props;
   .cards {
     margin-top: -80px;
     height: 190px;
-    /* background-color: purple; */
     display: flex;
     gap: 10px;
   }
